@@ -110,6 +110,8 @@ function scores() {
 	correct_ans=(` cat $correct_file ` ) #Assigning correct_ans to correct_ans array
 	#echo "${user_ans[@]}"
 	#echo "${correct_ans[@]}"
+	yellow='\033[0;033m'
+	reset='\033[0m'
 	score=0 
 	i=0
 	while [ $i -lt ${#user_ans[@]} ] #Looping upto how many numbers of user_ans in array 
@@ -120,7 +122,7 @@ function scores() {
 		fi
 		i=$(( i + 1 )) #incrementing by one each time
 	done
-	echo "Toatal marks obtained : $score / 10"
+	echo -e "${yellow} Toatal marks obtained : $score / 10 ${reset}"
 }
 
 #function to take_test 
@@ -154,7 +156,10 @@ function result() {
 	correct_file="correct_ans.csv" #Assiging correct_ans csv to user_file
 	user_ans=( ` cat $user_file ` ) #Assigning user_file to user_ans array
 	correct_ans=(` cat $correct_file ` ) #Assigning correct_ans to correct_ans array
-	
+	red='\033[0;31m'
+	green='\033[0;32m'
+	blue='\033[0;34m'
+	reset='\033[0m'
 	i=1
 	while [ $i -le 50 ]
 	do
@@ -166,11 +171,11 @@ function result() {
 
 		if [ "$user_choice" = "$correct_choice" ] #Checking user_choice and correct_choice
 		then
-			echo "Your Answer : $user_choice (Correct) " #if same means displaying your answer and correct
+			echo -e "${green}Your Answer : $user_choice (Correct) ${reset} " #if same means displaying your answer and correct
 		else
-			echo "Your Answer : $user_choice (Wrong) " #if not same means displaying your answer and wrong
+			echo -e "${red}Your Answer : $user_choice (Wrong) ${reset} " #if not same means displaying your answer and wrong
 		fi
-		echo "Correct Answer : $correct_choice " #displaying correct choice
+		echo -e "${blue}Correct Answer : $correct_choice ${reset}" #displaying correct choice
 		echo
 		sleep 3 #sleep for 3 seconds
 		i=$(( i + 5 )) #displaying 5 5 lines each time
