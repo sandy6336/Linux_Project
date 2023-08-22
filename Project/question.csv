@@ -1,0 +1,51 @@
+1.Linux is a
+a.Proprietry software
+b.Freeware
+c.Open source Software
+d.Both b&c
+2.The system structure of linux is
+a.Monolithic Kernal
+b.Hybrid Kernal
+c.Micro Kernal
+d.Nano kernal
+3.In which file do we make configuration and setting change in shell
+a.vimrc
+b.bashrc
+c.bash_logout
+d.bash_profile
+4.Name the most commonly used shell in linux system
+a.sh
+b.ksh
+c.csh
+d.bash
+5.Which symbol represents the users home dir ?
+a.~
+b.@
+c.#
+d./
+6.Which command used to delete directories and file recursively
+a.del -r
+b.rm -r
+c.rm -f
+d.rmdir -r
+7.which command used to display content of file?
+a.zcat
+b.echo
+c.cat
+d.display
+8.Which command used to rename ?
+a.mv
+b.cp
+c.wc
+d.w
+9.which command used to copy ?
+a.mv
+b.cp
+c.wc
+d.w
+10.Which command used to print current directory ?
+a.cd
+b.pwd
+c.cut
+d.sed
+
